@@ -1,0 +1,151 @@
+
+/* Pengaturan seluruh halaman */
+body {background-color: #f1f5f9;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    color: #1e293b;}
+
+/* Bagian header */
+header {background-color: #1e293b;
+    color: white;
+    padding: 40px;
+    text-align: center;}
+
+/* Menu navigasi */
+nav {background-color: #334155;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;}
+
+nav a {color: white;
+    text-decoration: none;}
+
+/* Konten utama */
+main {max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;}
+
+/* Setiap bagian */
+section {background-color: white;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 12px;}
+
+/* Footer */
+footer {background-color: #1e293b;
+    color: white;
+    text-align: center;
+    padding: 20px;}
+
+
+.skill-container {display: flex;
+    flex-direction: row;
+    gap: 15px;
+    margin-top: 20px;}
+
+.skill-box {background-color: #334155;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    flex: 1;
+    text-align: center;}
+
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 600px) {
+
+    header {padding: 25px 15px;}
+
+    nav {flex-wrap: wrap;
+        gap: 15px;}
+
+    main {padding: 15px;}
+
+    section {padding: 20px;}
+
+    .skill-container {flex-direction: column;}}
+
+
+#tombolUbah {
+    background-color: #334155;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;}
+
+#tombolUbah:hover {
+    background-color: #1e293b;}
+
+
+/* Tombol Dark Mode */
+#tombolTema {
+    background-color: #475569;
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;}
+
+/* Tampilan ketika Dark Mode aktif */
+body.dark-mode {
+    background-color: #0f172a;
+    color: #e2e8f0;}
+
+body.dark-mode section {
+    background-color: #1e293b;
+    color: #e2e8f0;}
+
+
+/* CONTACT FORM */
+
+#contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;}
+
+#contactForm input,
+#contactForm textarea {
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+    font-size: 15px;}
+
+#contactForm textarea {
+    min-height: 120px;
+    resize: vertical;}
+
+#contactForm button {
+    background-color: #334155;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;}
+
+#contactForm button:hover {
+    background-color: #1e293b;}
+
+
+/* Mengatur perhitungan ukuran elemen */
+* {box-sizing: border-box;}
+
+/* Contact Section */
+#contact {
+    width: 100%;
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 25px;
+    background-color: white;
+    border-radius: 12px;}
+
+/* Dark Mode */
+body.dark-mode #contact {
+    background-color: #1e293b;
+    color: #e2e8f0;}
