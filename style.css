@@ -149,3 +149,15 @@ body.dark-mode section {
 body.dark-mode #contact {
     background-color: #1e293b;
     color: #e2e8f0;}
+html {scroll-behavior: smooth;}
+#backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 12px;
+    background-color: #334155;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    display: none;}
