@@ -76,3 +76,86 @@ backToTop.addEventListener("click", function() {
 
 });
 document.getElementById("backToTop")
+
+
+// Mengambil elemen HTML
+const skillInput = document.getElementById("skillInput");
+const addSkill = document.getElementById("addSkill");
+const skillList = document.getElementById("skillList");
+
+
+let skills = JSON.parse(localStorage.getItem("skills")) || [];
+
+function displaySkills() {
+
+    skillList.innerHTML = "";
+
+    skills.forEach(function(skill, index) {
+
+        const newSkill = document.createElement("div");
+        newSkill.classList.add("skill-item");
+
+        const skillText = document.createElement("span");
+        skillText.textContent = skill;
+
+        const deleteButton = document.createElement("button");
+        deleteButton.textContent = "Hapus";
+
+        deleteButton.addEventListener("click", function() {
+
+            skills.splice(index, 1);
+
+            saveSkills();
+            displaySkills();
+
+        });
+
+        newSkill.appendChild(skillText);
+        newSkill.appendChild(deleteButton);
+
+        skillList.appendChild(newSkill);
+
+    });
+
+}
+function saveSkills() {
+
+    localStorage.setItem(
+        "skills",
+        JSON.stringify(skills)
+    );
+
+}
+
+addSkill.addEventListener("click", function() {
+
+    const skillName = skillInput.value.trim();
+
+    if (skillName === "") {
+        alert("Masukkan nama skill terlebih dahulu!");
+        return;
+    }
+
+    // Mencegah skill duplikat
+    if (skills.some(skill =>
+        skill.toLowerCase() === skillName.toLowerCase()
+    )) {
+        alert("Skill tersebut sudah ada!");
+        return;
+    }
+
+    // Memasukkan skill ke array
+    skills.push(skillName);
+
+    // Menyimpan data
+    saveSkills();
+
+    // Menampilkan ulang daftar skill
+    displaySkills();
+
+    // Mengosongkan input
+    skillInput.value = "";
+
+});
+// Menampilkan skill saat halaman pertama kali dibuka
+displaySkills();
