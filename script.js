@@ -55,6 +55,7 @@ contactForm.addEventListener("submit", function(event) {
 
         contactForm.reset();}
 });
+
 const backToTop = document.getElementById("backToTop");
 
 window.addEventListener("scroll", function() {
@@ -66,7 +67,6 @@ window.addEventListener("scroll", function() {
     }
 
 });
-
 backToTop.addEventListener("click", function() {
 
     window.scrollTo({
@@ -75,3 +75,4 @@ backToTop.addEventListener("click", function() {
     });
 
 });
+document.getElementById("backToTop")
